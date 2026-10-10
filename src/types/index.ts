@@ -1,4 +1,4 @@
-export type PillarCategory = 'branding' | 'social' | 'performance' | 'crm';
+export type PillarCategory = 'branding' | 'sites' | 'social' | 'performance' | 'crm' | 'parceria';
 
 export interface ServicePillar {
   id: PillarCategory;

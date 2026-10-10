@@ -214,12 +214,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialMessage =
                   <label className="text-xs font-mono uppercase text-neutral-400 block font-semibold">
                     Quais pilares sua empresa necessita?
                   </label>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                     {[
                       'Criação de Marcas',
+                      'Criação de Sites & Landing Pages',
+                      'Google Ads & Tráfego Pago',
                       'Redes Sociais',
-                      'Anúncios Pagos',
-                      'CRM & Vendas',
+                      'Aceleração Comercial & Vendas',
+                      'Modelo de Parceria Estratégica',
                     ].map((pil) => {
                       const selected = formData.pillars.includes(pil);
                       return (

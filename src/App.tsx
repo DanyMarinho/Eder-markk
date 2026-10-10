@@ -7,9 +7,11 @@ import React, { useState, useEffect } from 'react';
 import { HeroExit } from './components/HeroExit';
 import { Methodology } from './components/Methodology';
 import { Services } from './components/Services';
+import { GoogleEcosystemSection } from './components/GoogleEcosystemSection';
 import { Cases } from './components/Cases';
 import { ClientsSocialProof } from './components/ClientsSocialProof';
 import { FounderSection } from './components/FounderSection';
+import { PartnershipSection } from './components/PartnershipSection';
 import { DiagnosticTool } from './components/DiagnosticTool';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -78,21 +80,24 @@ export default function App() {
             MARKK
           </a>
 
-          <nav className="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-neutral-600">
-            <a href="#sobre" className="hover:text-black transition-colors">
-              Nós
-            </a>
+          <nav className="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-neutral-600">
             <a href="#gps" className="hover:text-black transition-colors">
               GPS Markk
             </a>
             <a href="#pilares" className="hover:text-black transition-colors">
-              4 Pilares
+              Pilares & Sites
+            </a>
+            <a href="#google-trafego" className="hover:text-black transition-colors">
+              Google & Tráfego
+            </a>
+            <a href="#taranua" className="hover:text-black transition-colors">
+              Tá na rua
             </a>
             <a href="#clientes" className="hover:text-black transition-colors">
               Clientes
             </a>
-            <a href="#taranua" className="hover:text-black transition-colors">
-              Tá na rua
+            <a href="#parcerias" className="hover:text-black transition-colors">
+              Parcerias
             </a>
             <a href="#contato" className="hover:text-black transition-colors">
               Contato
@@ -145,9 +150,11 @@ export default function App() {
             {[
               { label: 'Sobre Nós (Manifesto)', href: '#sobre' },
               { label: 'GPS Markk (Metodologia)', href: '#gps' },
-              { label: 'Os 4 Pilares de Serviços', href: '#pilares' },
+              { label: 'Pilares & Criação de Sites', href: '#pilares' },
+              { label: 'Google Ads & Tráfego Pago', href: '#google-trafego' },
               { label: 'Nossos Clientes', href: '#clientes' },
               { label: 'Tá na rua (Portfólio & Cases)', href: '#taranua' },
+              { label: 'Modelo de Parceria & B2B', href: '#parcerias' },
               { label: 'Diagnóstico de Negócio', href: '#diagnostico' },
               { label: 'Vamos Tomar um Café (Contato)', href: '#contato' },
             ].map((item, idx) => (
@@ -228,22 +235,28 @@ export default function App() {
         {/* 2. S-BANNER-GPS (Exact Exit.ag #ebebeb banner + framework) */}
         <Methodology />
 
-        {/* 3. OS 4 PILARES DE SERVIÇOS (Markk Core Capabilities) */}
+        {/* 3. OS PILARES DE SERVIÇOS (Markk Core Capabilities) */}
         <Services onSelectPillar={handleSelectPillar} />
 
-        {/* 4. LIDERANÇA & CULTURA: ÉDER CAVALHEIRO (DNA Markk) */}
+        {/* 4. ECOSSISTEMA GOOGLE, TRÁFEGO PAGO & CRIAÇÃO DE SITES */}
+        <GoogleEcosystemSection onOpenIntakeModal={handleOpenIntake} />
+
+        {/* 5. LIDERANÇA & CULTURA: ÉDER CAVALHEIRO (DNA Markk) */}
         <FounderSection onOpenIntakeModal={() => handleOpenIntake('Solicitação de reunião com Éder Cavalheiro')} />
 
-        {/* 5. S-CLIENTES (Nossos Clientes) */}
+        {/* 6. S-CLIENTES (Nossos Clientes) */}
         <ClientsSocialProof />
 
-        {/* 5. S-JOBS: TÁ NA RUA (Projetos e Campanhas) */}
+        {/* 7. S-JOBS: TÁ NA RUA (Projetos e Campanhas) */}
         <Cases onSelectCase={(caseStudy) => setSelectedCase(caseStudy)} />
 
-        {/* 6. FERRAMENTA INTERATIVA: DIAGNÓSTICO DE NEGÓCIO */}
+        {/* 8. MODELO DE PARCERIA & ALIANÇAS B2B */}
+        <PartnershipSection onOpenIntakeModal={handleOpenIntake} />
+
+        {/* 9. FERRAMENTA INTERATIVA: DIAGNÓSTICO DE NEGÓCIO */}
         <DiagnosticTool />
 
-        {/* 7. CONVERSÃO & CTA ("Negócios valem mais quando viram marcas fortes") */}
+        {/* 10. CONVERSÃO & CTA ("Negócios valem mais quando viram marcas fortes") */}
         <ContactSection initialMessage={intakeContext} />
       </main>
 

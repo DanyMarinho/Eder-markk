@@ -50,12 +50,24 @@ export const Header: React.FC<HeaderProps> = ({ onOpenIntakeModal }) => {
           </a>
 
           {/* Navigation Links (Exit.ag lowercase/clean rhythm) */}
-          <nav className="hidden lg:flex items-center gap-8 text-[13px] font-semibold text-neutral-600">
+          <nav className="hidden lg:flex items-center gap-7 text-[13px] font-semibold text-neutral-600">
             <a
               href="#gps"
               className="hover:text-black transition-colors whitespace-nowrap shrink-0"
             >
               GPS Markk
+            </a>
+            <a
+              href="#pilares"
+              className="hover:text-black transition-colors whitespace-nowrap shrink-0"
+            >
+              Pilares & Sites
+            </a>
+            <a
+              href="#google-trafego"
+              className="hover:text-black transition-colors whitespace-nowrap shrink-0"
+            >
+              Google & Tráfego
             </a>
             <a
               href="#taranua"
@@ -64,22 +76,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenIntakeModal }) => {
               Tá na rua
             </a>
             <a
-              href="#pilares"
-              className="hover:text-black transition-colors whitespace-nowrap shrink-0"
-            >
-              4 Pilares
-            </a>
-            <a
               href="#clientes"
               className="hover:text-black transition-colors whitespace-nowrap shrink-0"
             >
               Clientes
             </a>
             <a
-              href="#sobre"
+              href="#parcerias"
               className="hover:text-black transition-colors whitespace-nowrap shrink-0"
             >
-              Nós
+              Parcerias
             </a>
           </nav>
 

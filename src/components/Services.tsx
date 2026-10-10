@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { SERVICE_PILLARS } from '../data/markkData';
 import { ServicePillar } from '../types';
-import { ArrowUpRight, Check, ChevronDown, ChevronUp, Layers, Share2, Sparkles, TrendingUp } from 'lucide-react';
+import { ArrowUpRight, Check, ChevronDown, ChevronUp, Globe, Layers, Share2, Sparkles, TrendingUp } from 'lucide-react';
 
 interface ServicesProps {
   onSelectPillar: (pillar: ServicePillar) => void;
 }
 
 export const Services: React.FC<ServicesProps> = ({ onSelectPillar }) => {
-  const [expandedPillar, setExpandedPillar] = useState<string>('branding');
+  const [expandedPillar, setExpandedPillar] = useState<string>('sites');
 
   const getIcon = (name: string) => {
     switch (name) {
       case 'Sparkles':
         return <Sparkles className="w-5 h-5 text-black" />;
+      case 'Globe':
+        return <Globe className="w-5 h-5 text-black" />;
       case 'Share2':
         return <Share2 className="w-5 h-5 text-black" />;
       case 'TrendingUp':
@@ -30,13 +32,13 @@ export const Services: React.FC<ServicesProps> = ({ onSelectPillar }) => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl space-y-4">
             <div className="text-xs font-mono uppercase tracking-widest text-[#ff5a23] font-semibold">
-              ESCOPO DE ATUAÇÃO
+              ESCOPO COMPLETO DE ATUAÇÃO
             </div>
             <h2 className="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight text-black leading-tight">
-              Os Quatro Pilares Markk
+              Pilares de Crescimento Markk
             </h2>
             <p className="text-base sm:text-lg text-neutral-600 font-normal leading-relaxed">
-              Estruturas integradas para empresas que buscam liderança de mercado. Cada pilar opera de forma autônoma ou em sinergia completa.
+              Soluções integradas para negócios que buscam atração contínua de clientes e fechamento de vendas. Do branding e criação de sites ao Google Ads, redes e aceleração comercial.
             </p>
           </div>
           <div className="text-xs font-mono text-neutral-500 uppercase tracking-widest">

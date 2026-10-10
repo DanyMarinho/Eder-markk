@@ -13,7 +13,7 @@ export const MARKK_CONTACT = {
   city: 'Joinville, Santa Catarina',
   instagram: '@markk.brasil',
   instagramUrl: 'https://instagram.com/markk.brasil',
-  whatsappUrl: 'https://wa.me/5547984196744?text=Ol%C3%A1%20%C3%89der%2C%20gostaria%20de%20conversar%20sobre%20o%20crescimento%20da%20minha%20empresa%20com%20a%20Markk.',
+  whatsappUrl: 'https://wa.me/5547984196744?text=Ol%C3%A1%20%C3%89der%2C%20gostaria%20de%20conversar%20sobre%20parceria%20e%20crescimento%20da%20minha%20empresa%20com%20a%20Markk.',
   slogan: 'Marcas, Mentes e Negócios',
   subheadline: 'Atraia mais clientes e venda mais!',
 };
@@ -21,8 +21,8 @@ export const MARKK_CONTACT = {
 export const METRICS = [
   { value: '+R$ 24M', label: 'Em vendas geradas para clientes', detail: 'Faturamento mensurado nas operações atendidas' },
   { value: '+60', label: 'Empresas aceleradas', detail: 'Varejo, indústria, construtoras e distribuição' },
-  { value: '5.8x', label: 'ROAS médio em anúncios pagos', detail: 'Retorno sobre investimento em tráfego de alta conversão' },
-  { value: '4', label: 'Pilares estratégicos integrados', detail: 'Branding, Social, Tráfego e Treinamento Comercial' },
+  { value: '5.8x', label: 'ROAS médio em anúncios pagos', detail: 'Retorno sobre investimento em Meta Ads e Google Ads' },
+  { value: '100%', label: 'Alinhamento em modelo de parceria', detail: 'Atuamos lado a lado com a diretoria das empresas' },
 ];
 
 export const SERVICE_PILLARS: ServicePillar[] = [
@@ -34,7 +34,7 @@ export const SERVICE_PILLARS: ServicePillar[] = [
     description: 'Direção estratégica e identidade visual que constroem valor, autoridade e desejo. Criamos marcas que se destacam na mente do consumidor para você nunca mais disputar por centavos.',
     deliverables: [
       'Identidade Visual Completa & Redesign de Marca',
-      'Arquitetura, Posicionamento & Naming',
+      'Arquitetura, Posicionamento & Naming Comercial',
       'Manual de Marca & Diretrizes de Aplicação',
       'Fachadas, Embalagens, Frotas & Materiais de PDV',
       'Comunicação Visual Integrada'
@@ -43,14 +43,46 @@ export const SERVICE_PILLARS: ServicePillar[] = [
     iconName: 'Sparkles',
   },
   {
-    id: 'social',
+    id: 'sites',
     number: '02',
+    title: 'Criação de Sites & Landing Pages',
+    subtitle: 'Páginas de Alta Conversão & Presença Digital',
+    description: 'Desenvolvimento de sites institucionais de alto padrão, landing pages velozes e e-commerces projetados com uma única meta: converter visitantes em contatos no WhatsApp e pedidos de orçamento.',
+    deliverables: [
+      'Landing Pages de Alta Conversão com Carregamento Ultrarrápido',
+      'Sites Institucionais com Design Editorial de Alto Padrão',
+      'Integração Completa com WhatsApp, CRM e Formulários',
+      'Rastreamento Avançado de Eventos (Google Analytics 4 e Pixel)',
+      'Otimização Completa para Dispositivos Móveis (Mobile-First)'
+    ],
+    kpi: 'Taxa de Conversão de Visitantes em Leads Qualificados',
+    iconName: 'Globe',
+  },
+  {
+    id: 'performance',
+    number: '03',
+    title: 'Tráfego Pago & Ecossistema Google',
+    subtitle: 'Google Ads, Meta Ads & Alta Intenção de Compra',
+    description: 'Gestão científica de anúncios online. No Google, capturamos quem já está buscando o seu produto agora (Rede de Pesquisa, Shopping e Google Maps). No Meta Ads, geramos demanda e autoridade para o seu público ideal.',
+    deliverables: [
+      'Google Ads de Alta Intenção (Rede de Pesquisa e Palavras de Fundo de Funil)',
+      'Google Meu Negócio & Otimização de Busca Local (Maps)',
+      'Meta Ads (Instagram e Facebook) com Segmentação por Renda e Comportamento',
+      'Criação Contínua de Criativos e Anúncios de Alta Conversão',
+      'Otimização Diária de Custo por Lead (CPL) e ROAS'
+    ],
+    kpi: 'Volume Diário de Contatos no WhatsApp & ROAS Positivo',
+    iconName: 'TrendingUp',
+  },
+  {
+    id: 'social',
+    number: '04',
     title: 'Gestão de Redes Sociais',
     subtitle: 'Conteúdo com Método, Rotina & Vendas',
-    description: 'Conteúdo estratégico com método e rotina comercial. Gravamos, editamos e direcionamos pautas que posicionam a sua empresa como autoridade máxima no seu segmento e atraem compradores.',
+    description: 'Conteúdo estratégico com método e rotina comercial. Gravamos, editamos e direcionamos pautas que posicionam a sua empresa como autoridade máxima no seu segmento e atraem compradores prontos para fechar.',
     deliverables: [
-      'Pautas Estratégicas Orientadas a Fechamento',
-      'Direção de Arte & Criação de Carrosséis',
+      'Pautas Estratégicas Orientadas a Fechamento e Vendas',
+      'Direção de Arte & Criação de Carrosséis Informativos',
       'Captação e Edição de Vídeos em Formato Reels',
       'Posicionamento de Liderança dos Sócios e Especialistas',
       'Planejamento de Linha Editorial & Relatórios Semanais'
@@ -59,36 +91,76 @@ export const SERVICE_PILLARS: ServicePillar[] = [
     iconName: 'Share2',
   },
   {
-    id: 'performance',
-    number: '03',
-    title: 'Anúncios Pagos',
-    subtitle: 'Tráfego de Alta Precisão & ROAS',
-    description: 'Campanhas cirúrgicas de Meta Ads e Google Ads orientadas a encher o WhatsApp da sua equipe com leads qualificados todos os dias. Otimização diária de verba e foco no menor custo por cliente.',
-    deliverables: [
-      'Campanhas de Geração de Leads para WhatsApp e Ligações',
-      'Google Ads para Capturar Quem Já Está Buscando Seu Produto',
-      'Meta Ads com Segmentação Geográfica e de Renda',
-      'Criação de Anúncios e Criativos de Alta Conversão',
-      'Otimização Diária de ROAS e Custo por Oportunidade'
-    ],
-    kpi: 'Volume Diário de Leads & Retorno sobre Investimento',
-    iconName: 'TrendingUp',
-  },
-  {
     id: 'crm',
-    number: '04',
+    number: '05',
     title: 'Aceleração Comercial & Vendas',
     subtitle: 'Treinamento de Equipe, CRM & Fechamento',
     description: 'O grande diferencial da Markk liderado por Éder Cavalheiro. Treinamos a sua equipe de vendedores, estruturamos processos no CRM e criamos campanhas de fechamento agressivas para bater metas.',
     deliverables: [
       'Treinamento Motivacional e Técnico para Vendedores',
       'Campanhas de Vendas de Alto Impacto (Super Fecha Mês)',
-      'Implantação de CRM e Mapeamento de Funil',
+      'Implantação de CRM e Mapeamento de Funil Comercial',
       'Definição de SLA e Tempo de Resposta ao Lead',
       'Acompanhamento de Metas e Alinhamento de Postura'
     ],
     kpi: 'Taxa de Fechamento de Vendas & Batimento de Metas',
     iconName: 'Layers',
+  },
+];
+
+export const PARTNERSHIP_MODELS = [
+  {
+    tag: 'MODELO DE PARCERIA 01',
+    title: 'Parceiro Estratégico de Crescimento (Skin in the Game)',
+    subtitle: 'Para empresas que buscam um braço de marketing e vendas completo',
+    description: 'A Markk não atua como fornecedora terceirizada fria. Nós sentamos na mesa da diretoria, definimos metas de faturamento conjuntas e operamos branding, sites, Google Ads, redes e treinamento comercial de forma contínua.',
+    benefits: [
+      'Reuniões quinzenais de alinhamento com diretores e sócios',
+      'Equipe multidisciplinar dedicada (design, tráfego, web e estratégia)',
+      'Alinhamento direto com o time de vendas para garantir aproveitamento dos leads',
+      'Acompanhamento de ROI e faturamento gerado'
+    ],
+    cta: 'Quero a Markk como Parceira do Meu Negócio',
+  },
+  {
+    tag: 'MODELO DE PARCERIA 02',
+    title: 'Aliança Comercial & Co-produção B2B',
+    subtitle: 'Para consultores, softwares de CRM, representantes e desenvolvedores',
+    description: 'Programa de parcerias para profissionais e empresas que atendem clientes B2B e querem oferecer a força de atração, criação de sites e aceleração comercial da Markk, com modelo estruturado de receita compartilhada.',
+    benefits: [
+      'Remuneração por indicação e receita compartilhada estruturada',
+      'Atendimento prioritário para os clientes indicados',
+      'Soluções complementares que aumentam o valor do seu serviço',
+      'Apoio consultivo direto de Éder Cavalheiro nas propostas'
+    ],
+    cta: 'Quero Ser um Parceiro Homologado Markk',
+  },
+];
+
+export const GOOGLE_ECOSYSTEM_PILLARS = [
+  {
+    title: 'Google Rede de Pesquisa (Fundo de Funil)',
+    concept: 'Quem pesquisa no Google quer comprar agora. Colocamos sua empresa no topo quando o cliente digitar exatamente o que você vende.',
+    example: 'Ex: "distribuidora de pneus em Joinville", "piscina de fibra preço", "consultoria engenharia civil"',
+    benefit: 'Leads com alta intenção de compra imediata'
+  },
+  {
+    title: 'Google Meu Negócio & Busca Local (Maps)',
+    concept: 'Mais de 70% das decisões de compra no comércio e serviços começam no mapa do Google. Otimizamos sua presença para dominar a sua região.',
+    example: 'Avaliações estratégicas, fotos profissionais, palavras-chave locais e botão direto para ligar ou abrir WhatsApp.',
+    benefit: 'Fluxo constante de clientes na sua porta física'
+  },
+  {
+    title: 'Landing Pages & Sites Ultrarrápidos',
+    concept: 'O Google penaliza sites lentos e o cliente desiste em 3 segundos. Criamos páginas modernas, rápidas e pensadas para o clique de contato.',
+    example: 'Estrutura pensada para celulares, carregamento abaixo de 1.5s e botão de WhatsApp flutuante com rastreamento.',
+    benefit: 'Menor custo por lead e maior taxa de conversão'
+  },
+  {
+    title: 'Google Shopping & Remarketing em Display/YouTube',
+    concept: 'Para catálogos, distribuidores e e-commerces: exibição visual dos seus produtos com foto e preço direto na vitrine do Google.',
+    example: 'Anúncios que perseguem quem visitou seu site e lembram da sua proposta até a decisão final.',
+    benefit: 'Presença de marca massiva e recuperação de orçamentos'
   },
 ];
 
@@ -101,25 +173,24 @@ export const METHODOLOGY_STAGES = [
   },
   {
     step: '02',
-    name: 'Estruturação da Marca & Oferta',
-    concept: 'Definimos a narrativa que convence e a identidade visual que transmite credibilidade imediata.',
-    action: 'Criação de materiais, comunicação de autoridade e padronização visual em todos os pontos de contato.',
+    name: 'Estruturação da Marca, Site & Oferta',
+    concept: 'Definimos a narrativa que convence, a identidade visual e o site/landing page de alta conversão.',
+    action: 'Criação de páginas rápidas, materiais comerciais de autoridade e padronização visual em todos os canais.',
   },
   {
     step: '03',
-    name: 'Ativação de Tráfego & Redes Sociais',
-    concept: 'Colocamos a máquina para rodar: anúncios ativos e redes sociais com rotina consistente.',
+    name: 'Ativação do Tráfego Google & Meta Ads',
+    concept: 'Colocamos a máquina para rodar: campanhas no Google e redes sociais para atrair clientes todos os dias.',
     action: 'Geração contínua de novos contatos qualificados no WhatsApp e canais de atendimento da sua empresa.',
   },
   {
     step: '04',
-    name: 'Treinamento Comercial & Escala',
+    name: 'Treinamento Comercial, CRM & Parceria Contínua',
     concept: 'O método Éder Cavalheiro: garantir que o vendedor atenda rápido, quebre objeções e feche negócios.',
     action: 'Acompanhamento do CRM, treinamento de postura e cadência comercial para multiplicar as vendas.',
   },
 ];
 
-// CLIENTES REAIS RETIRADOS DIRETAMENTE DO INSTAGRAM DA MARKK (@markk.brasil)
 export const CLIENT_LOGOS: ClientPartner[] = [
   { name: 'Supermercado Machado', segment: 'Varejo Alimentício & Hipermercado', metric: 'Branding & Campanhas de Alto Volume' },
   { name: 'Fassa Pneus', segment: 'Atacado & Varejo de Pneus e Frotas', metric: 'Captação Contínua de Clientes' },
@@ -135,7 +206,6 @@ export const CLIENT_LOGOS: ClientPartner[] = [
   { name: 'Lear Corporativo', segment: 'Indústria & Manufatura', metric: 'Comunicação Interna & Alinhamento' },
 ];
 
-// CASES REAIS DO INSTAGRAM DA MARKK COM O ESCOPO EXATO
 export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'supermercado-machado',

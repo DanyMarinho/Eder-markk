@@ -61,10 +61,20 @@ export const Footer: React.FC = () => {
             <div className="text-xs font-mono uppercase tracking-widest text-[#ff5a23] font-bold">
               ESTRUTURA DO SITE
             </div>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <a href="#gps" className="text-white hover:text-[#ff5a23] transition-colors">
-                  GPS Markk
+                  GPS Markk (Metodologia)
+                </a>
+              </li>
+              <li>
+                <a href="#pilares" className="text-white hover:text-[#ff5a23] transition-colors">
+                  Pilares & Criação de Sites
+                </a>
+              </li>
+              <li>
+                <a href="#google-trafego" className="text-white hover:text-[#ff5a23] transition-colors">
+                  Google Ads & Tráfego Pago
                 </a>
               </li>
               <li>
@@ -73,18 +83,13 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#pilares" className="text-white hover:text-[#ff5a23] transition-colors">
-                  Os Quatro Pilares
-                </a>
-              </li>
-              <li>
                 <a href="#clientes" className="text-white hover:text-[#ff5a23] transition-colors">
                   Nossos Clientes
                 </a>
               </li>
               <li>
-                <a href="#sobre" className="text-white hover:text-[#ff5a23] transition-colors">
-                  Sobre Nós (Manifesto)
+                <a href="#parcerias" className="text-white hover:text-[#ff5a23] transition-colors">
+                  Modelo de Parceria & B2B
                 </a>
               </li>
               <li>
