@@ -41,7 +41,18 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialMessage =
 
   const handleOpenWhatsAppDirect = () => {
     const text = `*Contato via Site Markk*%0A%0A*Nome:* ${formData.name || 'Não informado'}%0A*Empresa:* ${formData.company || 'Não informada'}%0A*E-mail:* ${formData.email || 'Não informado'}%0A*WhatsApp:* ${formData.phone || 'Não informado'}%0A*Interesse:* ${formData.pillars.join(', ') || 'Geral'}%0A*Mensagem:* ${formData.message || 'Gostaria de agendar um café e conversar sobre meu projeto.'}`;
-    window.open(`https://wa.me/${MARKK_CONTACT.phoneClean}?text=${text}`, '_blank');
+    const url = `https://wa.me/${MARKK_CONTACT.phoneClean}?text=${text}`;
+    try {
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch {
+      window.location.href = url;
+    }
   };
 
   return (

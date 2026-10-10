@@ -8,6 +8,7 @@ import { HeroExit } from './components/HeroExit';
 import { Methodology } from './components/Methodology';
 import { Services } from './components/Services';
 import { GoogleEcosystemSection } from './components/GoogleEcosystemSection';
+import { PartnersEcosystemSection } from './components/PartnersEcosystemSection';
 import { Cases } from './components/Cases';
 import { ClientsSocialProof } from './components/ClientsSocialProof';
 import { FounderSection } from './components/FounderSection';
@@ -84,20 +85,26 @@ export default function App() {
             <a href="#gps" className="hover:text-black transition-colors">
               GPS Markk
             </a>
-            <a href="#pilares" className="hover:text-black transition-colors">
-              Pilares & Sites
-            </a>
-            <a href="#google-trafego" className="hover:text-black transition-colors">
-              Google & Tráfego
+            <a href="#clientes" className="hover:text-black transition-colors">
+              Clientes
             </a>
             <a href="#taranua" className="hover:text-black transition-colors">
               Tá na rua
             </a>
-            <a href="#clientes" className="hover:text-black transition-colors">
-              Clientes
+            <a href="#ecossistema-parceiros" className="hover:text-black transition-colors">
+              Parceiros & Mídia
             </a>
-            <a href="#parcerias" className="hover:text-black transition-colors">
-              Parcerias
+            <a href="#pilares" className="hover:text-black transition-colors">
+              Serviços & Sites
+            </a>
+            <a href="#google-trafego" className="hover:text-black transition-colors">
+              Google & Tráfego
+            </a>
+            <a href="#fundador" className="hover:text-black transition-colors">
+              Éder & DNA
+            </a>
+            <a href="#diagnostico" className="hover:text-black transition-colors">
+              Diagnóstico
             </a>
             <a href="#contato" className="hover:text-black transition-colors">
               Contato
@@ -148,21 +155,24 @@ export default function App() {
               ESTRUTURA DO SITE
             </div>
             {[
-              { label: 'Sobre Nós (Manifesto)', href: '#sobre' },
-              { label: 'GPS Markk (Metodologia)', href: '#gps' },
-              { label: 'Pilares & Criação de Sites', href: '#pilares' },
-              { label: 'Google Ads & Tráfego Pago', href: '#google-trafego' },
-              { label: 'Nossos Clientes', href: '#clientes' },
-              { label: 'Tá na rua (Portfólio & Cases)', href: '#taranua' },
-              { label: 'Modelo de Parceria & B2B', href: '#parcerias' },
-              { label: 'Diagnóstico de Negócio', href: '#diagnostico' },
-              { label: 'Vamos Tomar um Café (Contato)', href: '#contato' },
+              { label: '01. Abertura & Showreel', href: '#' },
+              { label: '02. Sobre Nós (Manifesto)', href: '#sobre' },
+              { label: '03. GPS Markk (Metodologia)', href: '#gps' },
+              { label: '04. Nossos Clientes (Marcas Reais)', href: '#clientes' },
+              { label: '05. Tá na rua (Portfólio & Cases)', href: '#taranua' },
+              { label: '06. Ecossistema & Especialistas Parceiros', href: '#ecossistema-parceiros' },
+              { label: '07. Os Pilares de Serviços da Markk', href: '#pilares' },
+              { label: '08. Google Ads, Busca Local & Sites', href: '#google-trafego' },
+              { label: '09. Éder Cavalheiro (DNA & Liderança)', href: '#fundador' },
+              { label: '10. Modelo de Parcerias B2B', href: '#parcerias' },
+              { label: '11. Diagnóstico Interativo de Negócio', href: '#diagnostico' },
+              { label: '12. Vamos Tomar um Café (Contato)', href: '#contato' },
             ].map((item, idx) => (
               <div key={idx}>
                 <a
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block font-display text-3xl sm:text-5xl font-black uppercase tracking-tight text-white hover:text-[#ff5a23] transition-colors leading-tight"
+                  className="block font-display text-2xl sm:text-4xl font-black uppercase tracking-tight text-white hover:text-[#ff5a23] transition-colors leading-tight"
                 >
                   {item.label}
                 </a>
@@ -235,20 +245,23 @@ export default function App() {
         {/* 2. S-BANNER-GPS (Exact Exit.ag #ebebeb banner + framework) */}
         <Methodology />
 
-        {/* 3. OS PILARES DE SERVIÇOS (Markk Core Capabilities) */}
-        <Services onSelectPillar={handleSelectPillar} />
-
-        {/* 4. ECOSSISTEMA GOOGLE, TRÁFEGO PAGO & CRIAÇÃO DE SITES */}
-        <GoogleEcosystemSection onOpenIntakeModal={handleOpenIntake} />
-
-        {/* 5. LIDERANÇA & CULTURA: ÉDER CAVALHEIRO (DNA Markk) */}
-        <FounderSection onOpenIntakeModal={() => handleOpenIntake('Solicitação de reunião com Éder Cavalheiro')} />
-
-        {/* 6. S-CLIENTES (Nossos Clientes) */}
+        {/* 3. S-CLIENTES (Nossos Clientes com marcas reais) */}
         <ClientsSocialProof />
 
-        {/* 7. S-JOBS: TÁ NA RUA (Projetos e Campanhas) */}
+        {/* 4. S-JOBS: TÁ NA RUA (Projetos e Campanhas de alto impacto) */}
         <Cases onSelectCase={(caseStudy) => setSelectedCase(caseStudy)} />
+
+        {/* 5. MODELO DE HUB & PARCEIROS HOMOLOGADOS (Tráfego Pago, Sites e Google) */}
+        <PartnersEcosystemSection onOpenIntakeModal={() => handleOpenIntake('Interesse em Tráfego, Sites e Ecossistema')} />
+
+        {/* 6. OS PILARES DE SERVIÇOS (Markk Core Capabilities) */}
+        <Services onSelectPillar={handleSelectPillar} />
+
+        {/* 7. ECOSSISTEMA GOOGLE, SITES & TRÁFEGO DE ALTA INTENÇÃO */}
+        <GoogleEcosystemSection onOpenIntakeModal={() => handleOpenIntake('Interesse no Ecossistema Google & Tráfego')} />
+
+        {/* 8. LIDERANÇA & CULTURA: ÉDER CAVALHEIRO (DNA Markk) */}
+        <FounderSection onOpenIntakeModal={() => handleOpenIntake('Solicitação de reunião com Éder Cavalheiro')} />
 
         {/* 8. MODELO DE PARCERIA & ALIANÇAS B2B */}
         <PartnershipSection onOpenIntakeModal={handleOpenIntake} />

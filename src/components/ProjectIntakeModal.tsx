@@ -55,7 +55,18 @@ export const ProjectIntakeModal: React.FC<ProjectIntakeModalProps> = ({
 
   const handleLaunchWhatsApp = () => {
     const text = `*Solicitação de Novo Projeto - Markk*%0A%0A*Nome:* ${name || 'Não informado'}%0A*Empresa:* ${company || 'Não informada'}%0A*WhatsApp:* ${phone || 'Não informado'}%0A*E-mail:* ${email || 'Não informado'}%0A*Pilares:* ${selectedPillars.join(', ') || 'Escopo Integrado'}%0A${customContext ? `*Contexto:* ${customContext}%0A` : ''}%0AOlá! Gostaria de agendar uma reunião estratégica com a equipe da Markk.`;
-    window.open(`https://wa.me/${MARKK_CONTACT.phoneClean}?text=${text}`, '_blank');
+    const url = `https://wa.me/${MARKK_CONTACT.phoneClean}?text=${text}`;
+    try {
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch {
+      window.location.href = url;
+    }
     setIsSent(true);
   };
 

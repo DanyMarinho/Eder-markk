@@ -34,7 +34,18 @@ export const DiagnosticTool: React.FC = () => {
 
   const handleSendToWhatsApp = () => {
     const text = `*Diagnóstico Markk - Resumo Estratégico*%0A%0A*Momento:* ${selectedStage}%0A*Gargalo:* ${selectedBottleneck}%0A*Faixa de Faturamento:* ${selectedRevenue}%0A%0A*Escopo Recomendado:* ${recommendation.title}%0A*Pilares:* ${recommendation.pillars.join(', ')}%0A%0AGostaria de conversar com um estrategista da Markk sobre esse diagnóstico.`;
-    window.open(`https://wa.me/${MARKK_CONTACT.phoneClean}?text=${text}`, '_blank');
+    const url = `https://wa.me/${MARKK_CONTACT.phoneClean}?text=${text}`;
+    try {
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch {
+      window.location.href = url;
+    }
   };
 
   const handleReset = () => {

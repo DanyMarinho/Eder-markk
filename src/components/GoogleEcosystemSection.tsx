@@ -19,7 +19,7 @@ export const GoogleEcosystemSection: React.FC<GoogleEcosystemSectionProps> = ({ 
             A Tríade que faz o lead chegar pronto para comprar.
           </h2>
           <p className="text-base sm:text-lg text-neutral-600 font-normal leading-relaxed">
-            Não adianta investir em anúncios no Google se o seu site for lento. E não adianta ter um site lindo se ninguém encontrar você. Na Markk, unimos <strong>Tráfego Pago de Alta Precisão</strong>, <strong>Criação de Sites de Alta Conversão</strong> e o <strong>Ecossistema Google</strong> em uma única engrenagem.
+            Não adianta investir em anúncios no Google se o seu site for lento. E não adianta ter um site lindo se ninguém encontrar você. Na Markk, unimos <strong>Tráfego Pago de Alta Precisão</strong>, <strong>Criação de Sites de Alta Conversão</strong> e o <strong>Ecossistema Google</strong> executados por nossa <strong>rede de parceiros especialistas homologados</strong>, sob a direção comercial e estratégica de Éder Cavalheiro.
           </p>
         </div>
 
